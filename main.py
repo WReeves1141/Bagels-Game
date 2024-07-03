@@ -18,7 +18,7 @@ def get_user_guess():
 
 is_game_on = True
 rand_number = str(random.randint(0, 999))
-user_guess = 0
+user_guess = 1
 l_user_guess = []
 print(rand_number)     # Temp
 
@@ -32,7 +32,7 @@ print("If 'Bagels' is displayed, you have no correct digits.\n")
 while is_game_on:
     printed_line = False
 
-    while user_guess > 999 or user_guess < 1:
+    while 999 >= user_guess >= 1:
         try:
             get_user_guess()
         except ValueError:
